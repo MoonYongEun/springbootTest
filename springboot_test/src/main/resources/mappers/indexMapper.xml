@@ -3,8 +3,8 @@
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
     
- <mapper namespace="index.dao.IndexDAO">
+ <mapper namespace="com.example.demo.dao.IndexDAO">
  	<insert id="insert" parameterType="java.util.Map">
- 		insert into teststs values(select case count(*) when 0 then 1 else max(seq) + 1 end, #{name},#{kor},#{math},#{eng}) 
+ 		insert into teststs(name,kor,math,eng) values(#{name},#{kor},#{math},#{eng}) 
  	</insert>
  </mapper>
