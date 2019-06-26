@@ -15,18 +15,29 @@ li{cursor:pointer;}
 <ul>
 	<li id="insert">1.입력</li>
 	<br>
-	<li>2.보기</li>
+	<li id="select">2.보기</li>
 	<br>
-	<li>3.수정</li>
+	<li id="modify">3.수정</li>
 	<br>
-	<li>4.삭제</li>
+	<li id="delete">4.삭제</li>
 </ul> 
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
 $('#insert').click(function(){
 	location.href="/insert";
-	
+});
+
+$('#select').click(function(){
+	location.href="/select";
+});
+
+$('#modify').click(function(){
+	location.href="/modify";
+});
+
+$('#delete').click(function(){
+	location.href="/delete";
 });
 </script>
 </html>

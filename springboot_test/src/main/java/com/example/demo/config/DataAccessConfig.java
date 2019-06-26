@@ -9,6 +9,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 @Configuration
 @MapperScan(basePackages = "com.example.demo.dao")
@@ -26,6 +27,11 @@ public class DataAccessConfig {
     @Bean
     public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory sqlSessionFactory) {
         return new SqlSessionTemplate(sqlSessionFactory);
+    }
+    
+    @Bean
+    MappingJackson2JsonView jsonView(){
+        return new MappingJackson2JsonView();
     }
 
 }

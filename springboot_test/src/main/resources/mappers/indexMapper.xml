@@ -7,4 +7,8 @@
  	<insert id="insert" parameterType="java.util.Map">
  		insert into teststs(name,kor,math,eng) values(#{name},#{kor},#{math},#{eng}) 
  	</insert>
+ 	
+ 	<select id="selectList" resultType="com.example.demo.model.IndexDTO">
+ 		select * from teststs
+ 	</select>
  </mapper>
