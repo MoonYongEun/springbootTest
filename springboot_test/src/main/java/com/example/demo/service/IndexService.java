@@ -11,4 +11,6 @@ public interface IndexService {
 
 	public List<IndexDTO> selectList();
 
+	public void delete(String seq);
+
 }

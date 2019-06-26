@@ -54,6 +54,11 @@ public class WelcomeController {
 		return "delete";
 	}
 	
+	@RequestMapping(value="/delete2", method = RequestMethod.GET)
+	public void delete2(@RequestParam String seq) {
+		indexService.delete(seq);
+	}
+	
 	
 	
 	@RequestMapping(value="/insert2" , method = RequestMethod.POST)

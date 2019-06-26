@@ -11,4 +11,8 @@
  	<select id="selectList" resultType="com.example.demo.model.IndexDTO">
  		select * from teststs
  	</select>
+ 	
+ 	<delete id="delete" parameterType="String">
+ 		delete from teststs where seq = #{seq}
+ 	</delete>
  </mapper>

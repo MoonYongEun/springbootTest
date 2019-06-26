@@ -29,4 +29,11 @@ public class IndexServiceImpl implements IndexService {
 		return list;
 	}
 
+
+	@Override
+	public void delete(String seq) {
+		indexdao.delete(seq);
+		
+	}
+
 }

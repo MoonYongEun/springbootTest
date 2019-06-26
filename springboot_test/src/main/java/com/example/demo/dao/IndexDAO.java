@@ -11,4 +11,6 @@ public interface IndexDAO {
 
 	public List<IndexDTO> selectList();
 
+	public void delete(String seq);
+
 }
