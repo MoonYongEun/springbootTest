@@ -49,14 +49,32 @@ public class WelcomeController {
 		return "modify";
 	}
 	
+	@RequestMapping(value="/modify2" , method = RequestMethod.POST)
+	public ModelAndView modify2(@RequestParam String name) {
+		IndexDTO dto = indexService.modifySearch(name);
+		ModelAndView  mav = new ModelAndView("jsonView");
+		mav.addObject("dto", dto);
+		
+		return mav;
+	}
+	
+	@RequestMapping(value="/modify3" , method = RequestMethod.POST)
+	public String modify3(@RequestParam Map<String,String> map) {
+		indexService.modifyUpdate(map);
+
+		return "helloworld";
+	}
+	
 	@RequestMapping("/delete")
 	public String delete() {
 		return "delete";
 	}
 	
-	@RequestMapping(value="/delete2", method = RequestMethod.GET)
-	public void delete2(@RequestParam String seq) {
+	@RequestMapping(value="/delete2", method = RequestMethod.POST)
+	public String delete2(@RequestParam String seq) {
 		indexService.delete(seq);
+		
+		return "helloworld";
 	}
 	
 	

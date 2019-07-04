@@ -36,4 +36,22 @@ public class IndexServiceImpl implements IndexService {
 		
 	}
 
+
+
+	@Override
+	public IndexDTO modifySearch(String name) {
+		IndexDTO dto =indexdao.modifySearch(name);
+		
+		return dto;
+	}
+
+
+
+	@Override
+	public void modifyUpdate(Map<String, String> map) {
+		indexdao.modifyUpdate(map);
+		
+	}
+
+
 }

@@ -13,4 +13,8 @@ public interface IndexService {
 
 	public void delete(String seq);
 
+	public IndexDTO modifySearch(String name);
+
+	public void modifyUpdate(Map<String, String> map);
+
 }

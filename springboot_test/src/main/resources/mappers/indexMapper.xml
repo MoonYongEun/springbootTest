@@ -12,6 +12,15 @@
  		select * from teststs
  	</select>
  	
+ 	<select id="modifySearch" parameterType="String" resultType="com.example.demo.model.IndexDTO">
+ 		select * from teststs where name = #{name}
+ 	</select>
+ 	
+ 	<update id="modifyUpdate" parameterType="java.util.Map">
+ 		update teststs set  kor=#{kor},math=#{math},eng=#{eng} where name=#{name}
+ 	</update>
+ 	
+ 	
  	<delete id="delete" parameterType="String">
  		delete from teststs where seq = #{seq}
  	</delete>
